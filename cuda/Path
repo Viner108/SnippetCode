@@ -1,0 +1,28 @@
+Установка
+1.C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0 - лежит cuda toolkit 11.0
+
+2.D:\soft\MVStudio - Visual Studia 2019 совместима с cuda 11.0
+
+3.D:\soft\MVStudio\VC\Tools\MSVC\14.23.28105\bin\HostX64\x64 - путь к cl.exe, занести в системную переменную Path
+  3a)Нажать Windows и ввести sysdm.cpl
+  3б)'Дополонительно' -> Переменные среды...
+  3в)В 'Переменные среды пользователя для User' выбрать Path и нажать кнопку Изменить
+  3г)Создать и в новой строке ввести путь
+
+4.C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\extras\demo_suite - путь к deviceQuery.exe чтобы проверить вычислительные возможности вашего GPU
+строка  CUDA Capability Major/Minor version number:
+
+5.https://www.nvidia.com/Download/Find.aspx?lang=en-us  - сайт для поиска совместимых драйверов с видеокартой NVIDIA
+
+6.https://developer.nvidia.com/cuda-11.0-download-archive - сайт для скачивания cuda 11.0 версия
+
+Коспиляция и запуcк
+
+1.Перейти в папку с файлом с расширением .cu
+
+2.Компиляция файл nvcc -arch=sm_35(указать в зависимости от вычислительных возможностей вашего GPU ) -o vectorAdd(название файла после компиляции) vectorAdd.cu(файл который надо скомпилировать)
+nvcc -arch=sm_35 -o vectorAdd vectorAdd.cu
+
+3.Испольнение файла vectorAdd.exe(название скомпилированного файла)
+vectorAdd.exe
+
